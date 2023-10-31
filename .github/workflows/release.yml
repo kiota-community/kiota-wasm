@@ -26,10 +26,10 @@ jobs:
         run: |
           dotnet workload install wasm-tools
           dotnet workload install wasm-experimental
-      - name: Install npm depenendencies
-        run: npm ci
       - name: Set version in package.json
-        run: npm version ${{ github.event.inputs.release-version }}
+        run: npm version ${{ github.ref_name }}
+      - name: Build the package
+        run: npm ci && npm run clean && npm run build
       - name: Publish to npmjs.com
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
