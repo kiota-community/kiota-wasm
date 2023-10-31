@@ -19,5 +19,5 @@ jobs:
         run: |
           dotnet workload install wasm-tools
           dotnet workload install wasm-experimental
-      - name: Publish locally
+      - name: Build locally
         run: npm ci && npm run clean && npm run build

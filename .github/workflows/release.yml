@@ -25,9 +25,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
       - name: Install WASM tools
-        run: dotnet workload install wasm-tools
-      - name: Publish
-        run: npm ci && npm run clean && npm run build
+        run: |
+          dotnet workload install wasm-tools
+          dotnet workload install wasm-experimental
+      - name: Install npm depenendencies
+        run: npm ci
       - name: Set version in package.json
         run: npm version ${{ github.event.inputs.release-version }}
       - name: Publish to npmjs.com
