@@ -1,10 +1,12 @@
 {
   "name": "@redhat-developer/kiota-wasm",
   "type": "module",
-  "version": "SNAPSHOT",
+  "version": "0.0.1",
   "description": "Kiota compiled in a native WASM module.",
   "main": "dist/main.js",
-  "files": [ "dist" ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rm -rf bin obj dist node_modules",
     "build": "dotnet build --configuration Release"
