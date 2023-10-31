@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andreaTP/apicurio-client-gen.git"
+    "url": "git+https://github.com/redhat-developer/kiota-wasm.git"
   },
   "keywords": [
     "kiota",
@@ -22,7 +22,7 @@
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/andreaTP/apicurio-client-gen/issues"
+    "url": "https://github.com/redhat-developer/kiota-wasm/issues"
   },
-  "homepage": "https://github.com/andreaTP/apicurio-client-gen#readme"
+  "homepage": "https://github.com/redhat-developer/kiota-wasm#readme"
 }
