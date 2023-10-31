@@ -22,7 +22,8 @@ jobs:
           dotnet-version: 7.0.x
       - name: Setup Node
         uses: actions/setup-node@v3
-        node-version: 18
+        with:
+          node-version: 18
           registry-url: 'https://registry.npmjs.org'
       - name: Install WASM tools
         run: |
