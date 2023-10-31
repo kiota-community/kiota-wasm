@@ -15,9 +15,11 @@ jobs:
           dotnet-version: 7.0.x
       - name: Setup Node
         uses: actions/setup-node@v3
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
       - name: Install WASM tools
         run: |
           dotnet workload install wasm-tools
           dotnet workload install wasm-experimental
       - name: Build locally
-        run: npm ci && npm run clean && npm run build
+        run: npm install && npm run clean && npm run build
