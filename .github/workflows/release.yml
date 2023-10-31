@@ -24,8 +24,6 @@ jobs:
           dotnet-version: 7.0.x
       - name: Setup Node
         uses: actions/setup-node@v3
-        with:
-          node-version: 'lts'
       - name: Install WASM tools
         run: dotnet workload install wasm-tools
       - name: Publish
