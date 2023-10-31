@@ -27,7 +27,7 @@ jobs:
           dotnet workload install wasm-tools
           dotnet workload install wasm-experimental
       - name: Set version in package.json
-        run: npm version ${{ github.ref_name }}
+        run: cat <<< $(jq -r ".version = \"${GITHUB_REF_NAME}\"" package.json) > package.json
       - name: Build the package
         run: npm ci && npm run clean && npm run build
       - name: Publish to npmjs.com
