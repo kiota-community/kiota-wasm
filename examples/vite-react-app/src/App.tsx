@@ -33,7 +33,7 @@ function App() {
       <a onClick={ async () => {
           // @ts-ignore
           const { generate } = await import('/kiota-wasm/main.js?url');
-          generate("", "", "", "", "", "")
+          generate("", "Java", "demo", "my-namespace", "", "")
         }}>Run Kiota in browser!</a>
     </>
   )
