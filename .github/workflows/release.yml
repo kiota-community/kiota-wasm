@@ -19,7 +19,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 7.0.x
+          dotnet-version: 8.0.x
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -32,7 +32,7 @@ jobs:
       - name: Set version in package.json
         run: cat <<< $(jq -r ".version = \"${GITHUB_REF_NAME}\"" package.json) > package.json
       - name: Build the package
-        run: npm install && npm run clean && npm run build
+        run: npm run clean && npm install && npm run build
       - name: Publish to npmjs.com
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

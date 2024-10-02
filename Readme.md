@@ -67,7 +67,7 @@ generate(spec: string, language: string, clientClassName: string, namespaceName:
 
 ## Build
 
-To build this project you need `dotnet` version 7+ and the `wasm-tools`:
+To build this project you need `dotnet` version 8+ and the `wasm-tools`:
 
 ```bash
 dotnet workload install wasm-tools
@@ -77,6 +77,22 @@ and run the build:
 
 ```bash
 dotnet build --configuration Release
+```
+
+## Run the example vite app
+
+Publish the package with:
+
+```bash
+yalc publish
+```
+
+In the example application folder:
+
+```bash
+yalc add @redhat-developer/kiota-wasm@0.0.1
+npm install
+npm run dev
 ```
 
 ## Release
