@@ -10,7 +10,7 @@ We do maintain working examples up to date to make sure that it's feasible to le
 
 1. Add this dependency to your project:
 
-`npm install -D @redhat-developer/kiota-wasm`
+`npm install -D @kiota-community/kiota-wasm`
 
 2. Unpack the resources in the public assets folder of your project (and we suggest to add it to your `.gitignore`):
 
@@ -21,7 +21,7 @@ npm install -D copyfiles rimraf
 ```json
   "scripts": {
     ...
-    "postinstall": "rimraf ./public/kiota-wasm && copyfiles -u 4 'node_modules/@redhat-developer/kiota-wasm/dist/**/*.*' 'public/kiota-wasm'"
+    "postinstall": "rimraf ./public/kiota-wasm && copyfiles -u 4 'node_modules/@kiota-community/kiota-wasm/dist/**/*.*' 'public/kiota-wasm'"
   }
   ...
 ```
@@ -90,7 +90,7 @@ yalc publish
 In the example application folder:
 
 ```bash
-yalc add @redhat-developer/kiota-wasm@0.0.1
+yalc add @kiota-community/kiota-wasm@0.0.1
 npm install
 npm run dev
 ```
