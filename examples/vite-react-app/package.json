@@ -8,14 +8,14 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "postinstall": "rimraf ./public/kiota-wasm && copyfiles -u 4 'node_modules/@redhat-developer/kiota-wasm/dist/**/*.*' 'public/kiota-wasm'"
+    "postinstall": "rimraf ./public/kiota-wasm && copyfiles -u 4 'node_modules/@kiota-community/kiota-wasm/dist/**/*.*' 'public/kiota-wasm'"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@redhat-developer/kiota-wasm": "file:.yalc/@redhat-developer/kiota-wasm",
+    "@kiota-community/kiota-wasm": "file:.yalc/@kiota-community/kiota-wasm",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

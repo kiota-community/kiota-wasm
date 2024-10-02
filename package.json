@@ -1,5 +1,5 @@
 {
-  "name": "@redhat-developer/kiota-wasm",
+  "name": "@kiota-community/kiota-wasm",
   "type": "module",
   "version": "0.0.1",
   "description": "Kiota compiled in a native WASM module.",
